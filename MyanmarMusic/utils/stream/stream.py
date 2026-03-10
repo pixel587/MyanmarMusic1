@@ -42,10 +42,10 @@ async def stream(
         u = str(u).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
         
         return (
-            f"<blockquote><emoji id='6120630771087579219'>🐼</emoji> <b>စတင်ထုတ်လွှင့်နေပြီ</b> |</blockquote>\n"
-            f"<blockquote><emoji id='6120465303177533732'>🐼</emoji> <b>ခေါင်းစဉ် :</b> {t[:27]}\n"
-            f"<emoji id='6120591326107935086'>🐼</emoji> <b>ကြာချိန် :</b> {d} ᴍɪɴᴜᴛᴇs\n"
-            f"<emoji id='6120398056874582504'>🐼</emoji> <b>တောင်းဆိုသူ :</b> {u}\n\n🐼MADE by🌻 HAN THAR</blockquote>"
+            f"<blockquote><emoji id='6120630771087579219'>🎬</emoji> <b> sᴛʀᴇᴀᴍ ʜᴀs sᴛᴀʀᴛᴇᴅ. ᴇɴᴊᴏʏ ᴛʜᴇ ᴍᴜsɪᴄ |</b> |</blockquote>\n"
+            f"<emoji id='6120465303177533732'>🎧</emoji> <b>ᴛɪᴛʟє ‣</b> {t[:27]}\n"
+            f"<emoji id='6120591326107935086'>⏱️</emoji> <b>ᴛɪϻє ‣</b> {d} ᴍɪɴᴜᴛᴇs\n"
+            f"<emoji id='6120398056874582504'>👻</emoji> <b>ʀᴇǫᴜᴇsᴛᴇʀ ‣</b> {u}\n"
         )
         
     def get_queue_text(t, d, u, p):
@@ -53,11 +53,11 @@ async def stream(
         u = str(u).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
         
         return (
-            f"<blockquote><emoji id='5895705279416241926'>🐼</emoji> <b>စာရင်းထဲသို့ ထည့်သွင်းလိုက်ပါပြီ</b> |</blockquote>\n"
-            f"<blockquote><emoji id='5962964097904413958'>🐼</emoji> <b>ခေါင်းစဉ် :</b> {t[:27]}\n"
-            f"<emoji id='5960715046869798071'>⏱</emoji> <b>ကြာချိန် :</b> {d} ᴍɪɴᴜᴛᴇs\n"
-            f"<emoji id='6325666711592769876'>🐼</emoji> <b>တောင်းဆိုသူ :</b> {u}\n"
-            f"<emoji id='5960863197471706506'>🐼</emoji> <b>အမှတ်စဉ် :</b> {p}\n\n🐼MADE BY 🤍 HAN THAR</blockquote>"
+            f"<blockquote><emoji id='5895705279416241926'>✨</emoji> <b>ᴛʀᴀᴄᴋ ʀᴇsᴇʀᴠᴇᴅ — ᴘʟᴀʏɪɴɢ sᴏᴏɴ </b> |</blockquote>\n"
+            f"<emoji id='5962964097904413958'>🎧</emoji> <b>Title :</b> {t[:27]}\n"
+            f"<emoji id='5960715046869798071'>⏱</emoji> <b>ʟᴇɴɢᴛʜ :</b> {d} ᴍɪɴᴜᴛᴇs\n"
+            f"<emoji id='6325666711592769876'>👻</emoji> <b>ʀᴇǫᴜᴇsᴛᴇʀ :</b> {u}\n"
+            f"<emoji id='5960863197471706506'>🍃</emoji> <b> Added to queue at</b> {p}\n"
         )
     # -----------------------------------------------------------
 
@@ -105,7 +105,7 @@ async def stream(
                 try:
                     await mystic.edit_text(_["play_dl"].format(title))
                 except KeyError:
-                    await mystic.edit_text(f"Dow͟n͟l͟o͟a͟d͟ ဆွဲနေပါသည် 🤍 ᥫ᭡ {title}")
+                    await mystic.edit_text(f"💿 သီချင်း ဆွဲနေပါသည် 🤍 ᥫ᭡ {title}")
 
                 try:
                     file_path, direct = await YouTube.download(
@@ -176,7 +176,7 @@ async def stream(
         try:
             await mystic.edit_text(_["play_dl"].format(title))
         except KeyError:
-            await mystic.edit_text(f"Dow͟n͟l͟o͟a͟d͟ ဆွဲနေပါသည် 🤍 ᥫ᭡ {title}")
+            await mystic.edit_text(f"💿 သီချင်း ဆွဲနေပါသည် 🤍 ᥫ᭡ {title}")
 
         try:
             file_path, direct = await YouTube.download(
@@ -450,8 +450,8 @@ async def stream(
             button = stream_markup(_, chat_id)
             
             index_text = (
-                f"<emoji id='6120465303177533732'>🐼</emoji> <b>စတင်ထုတ်လွှင့်နေပြီ (Index Stream)</b> |\n\n"
-                f"<emoji id='6120591326107935086'>🐼</emoji> <b>တောင်းဆိုသူ :</b> {user_name}"
+                f"<emoji id='6120465303177533732'>🤍</emoji> <b>sᴛʀᴇᴀᴍ ʜᴀs sᴛᴀʀᴛᴇᴅ.ᴇɴᴊᴏʏ ᴛʜᴇ ᴍᴜsɪᴄ</b> |\n\n"
+                f"<emoji id='6120591326107935086'>👻</emoji> <b>ʀᴇǫᴜᴇsᴛᴇʀ :</b> {user_name}"
             )
             run = await app.send_photo(
                 original_chat_id,
